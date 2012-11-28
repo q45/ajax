@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Ajaxifying Code</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js></script>
+    <![endif]-->
+
+    <script type="text/javascript">
+
+        var xmlhttp;
+
+        function changeContent() {
+            var theDiv = document.getElementById('content');
+            theDiv.innerHTML = "<h1>look ma I changed the content!</h1>";
+        }
+
+        function getNum() {
+            xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = callback;
+
+            xmlhttp.open('GET', "random.php", true);
+            xmlhttp.send();
+        }
+
+        //when information comes back from the server
+        function callback() {
+            console.log(xmlhttp.readyState);
+            console.log(xmlhttp.status);
+            if(xmlhttp.readyState == 4 && xmlhttp.status == 200)
+            {
+               document.getElementById('result').innerHTML = xmlhttp.responseText;
+            }
+
+        }
+
+    </script>
+</head>
+<body>
+    <div id="content">
+        <p>Here is some HTML content</p>
+    </div>
+
+    <input type="button" value="change Content" onclick="changeContent();" />
+
+<div id="result">
+
+</div>
+    <input type="button" value="get number" onclick="getNum();">
+
+<section>
+    <header>
+        <h1>ACC Basketball News</h1>
+    </header>
+    <article>
+        <header>
+            <h1>UNC Beats Duke In Championship Game!</h1>
+        </header>
+        <p>The Blue Devils are routed by the Tarheels at Cameron Indoor Stadium</p>
+        <aside>
+            <p>former duke players cry at games end</p>
+        </aside>
+    </article>
+</section>
+
+<footer>
+    <h3>Talk to me goose</h3>
+    <p>&copy; is for suckers!-Q</p>
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Contact</li>
+            </ul>
+        </nav>
+</footer>
+</body>
+</html>
