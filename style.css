@@ -1,0 +1,10 @@
+section {
+    width: 35%;
+
+}
+
+footer li {
+    display: inline;
+    padding: 5px;
+    margin-left: 5px;
+}
