@@ -8,3 +8,7 @@
  */
 
 echo "How are you doing today";
+echo "<br>";
+
+$soda = $_POST[soda];
+echo "<strong>$soda</strong>";

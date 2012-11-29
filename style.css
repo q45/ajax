@@ -1,4 +1,6 @@
-
+body {
+    background-color: #fcf9f4 ;
+}
 
 #better {
     float:left;
@@ -162,4 +164,21 @@
     color:#dc692e;
     background: #ababa2;
     background: rgba(208, 208m 198, .9);
+}
+
+input {
+    border-radius: 5px;
+    box-shadow: 1px 1px 2px #999;
+    opacity: 1;
+    background: orange;
+}
+
+input:hover {
+    opacity: .5;
+
+}
+
+p {
+    text-shadow: 1px 1px 2px #999;
+    color: rgba(0, 0, 0, 0.75);
 }
