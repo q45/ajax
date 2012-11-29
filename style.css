@@ -10,6 +10,7 @@
 
 #better:hover {
     opacity:1;
+    -webkit-transform: scale(1.1) rotate(-2deg);
 }
 
 #menu-promo {
@@ -27,10 +28,10 @@
 #logo {
     position:absolute;
     top: 8px;
-    left: 390px;
-    width: 141px;
+    left: 360px;
+    width: 180px;
     height: 144px;
-    background: orange;
+    background:url(images/logo.jpg)no-repeat;
     -webkit-transition: opacity .2s ease-in-out;
     -moz-transition: opacity .2s ease-in-out;
     -o-transition: opacity .2s ease-in-out;
@@ -72,11 +73,93 @@
     border-radius:5px;
     text-decoration: none;
 
-
-
 }
 
 #navigation li a:hover {
     color: #dc692e;
     background: #efefe9;
+}
+
+#promotional {
+    float:left;
+}
+
+#promotional img {
+    float:left;
+    border:15px solid #fafaf6;
+    -webkit-box-shadow: 0px 1px 1px #ccc;
+    -moz-box-shadow: 0px 1px 1px #ccc;
+    box-shadow: 0px 1px 1px #ccc;
+
+}
+
+#promotional img:hover {
+    -webkit-transform: scale(1.1) rotate(-2deg);
+    -mox-transform:scale(1.1) rotate(-2deg);
+    transform: scale(1.1) rotate(-2deg);
+}
+#selections {
+    float:right;
+    width: 425px;
+    margin-top: 15px;
+}
+
+#selections ul li {
+    width: 316px;
+    font: Georgia;
+    text-transform: uppercase;
+    color: #787871;
+    text-shadow: 1px 1px 1px #fff;
+    position: relative;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+    list-style: none;
+    float: left;
+}
+
+#selections em {
+    text-transform: lowercase;
+    font-style: italic;
+    letter-spacing: 0;
+}
+
+#promotional .menu:last-child {
+    float:right;
+    margin-right: 25px;
+}
+
+#selections span {
+    position: absolute;
+    top:-21px;
+
+    color: #dc692e;
+
+}
+
+#selections ul li.bottle {
+    padding-bottom: 8px;
+}
+
+#promotional a.menu {
+    width: 180px;
+    height: 50px;
+    padding: 20px 0 0 0;
+    text-align: center;
+    float: left;
+    background: #d0d0c6;
+    background: rgba(208, 208, 198, .5);
+    margin: 10px 0 0 28px;
+    color: #787871;
+    font: normal 18px Tahoma;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border:1px solid #d4d4cd;
+
+}
+
+#promotional a.menu:hover {
+    color:#dc692e;
+    background: #ababa2;
+    background: rgba(208, 208m 198, .9);
 }
