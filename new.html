@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Creating Sweet Forms</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="form.css">
+
+
+<body>
+<div class="wrap">
+
+    <div class="success">
+        <h2>thank you for signing up</h2>
+        <p>we sent you an email to verify your account</p>
+        <p><a id="close" href="#">Continue</a></p>
+    </div>
+    <h1>Sign Up </h1>
+    <p>We are excited for you to try our services</p>
+    <div id="warning">Oops, you didn't fill everything out</div>
+<form id="myform" action="javascript:void;" method="GET" >
+    <label for="">First Name: </label><input type="text" name="firstname" id="firstname" /><div class="error" id="first_error">You forgot your first name</div><br />
+    <label for="">Last Name: </label><input type="text" name="lastname" id="lastname" /><div class="error" id="last_error">You forgot your last name</div><br />
+    <label for="">Email: </label><input type="email" name="username" id="email" /><div class="error" id="email_error">You forgot your email address</div><br />
+    <label for="">Password: </label><input type="password" name="password" id="password"><div class="error" id="pass_error">Please enter a password</div><br />
+    <input type="submit" name="submit" value="Sign Up" id="submit"/>
+
+</form>
+    <p class="subtext">by signing up you agree to our  <a href="#">terms and conditions</a></p>
+</div>
+<script>
+$("#myform").submit(function() {
+    //Assume there are no errors on the form
+    var errors = false;
+
+    //hide all the error messages
+    $(".error").hide();
+
+    //check each field to make sure not blank
+    if($("#firstname").val() == "")
+    {
+        $("#first_error").show('slow');
+        errors = true;
+    }
+
+    if($("#lastname").val() == "")
+    {
+        $("#last_error").show('slow');
+        errors = true;
+    }
+
+    if($("#email").val() == "")
+    {
+        $("#email_error").show('slow');
+        errors = true;
+    }
+
+    if($("#password").val() == "")
+    {
+        $("#pass_error").show('slow');
+        errors = true;
+    }
+
+    //if there are errors then show a general error message
+    if(errors)
+    {
+        $('#warning').show('slow').fadeOut(5000);
+        return false;
+    } else {
+
+    //if there are not any errors show a succes message
+    $(".success").fadeIn(5000, function() {
+       $(".success").fadeOut(3000);
+    });
+    return true;
+    }
+
+    //Make the Close button on the success screen work
+
+});
+
+$("#close").click(function() {
+    $(".success").fadeOut(5000);
+});
+</script>
+
+
+</body>
+</html>

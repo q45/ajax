@@ -1,0 +1,131 @@
+html {
+    min-height: 100%;
+}
+body {
+    background: -webkit-linear-gradient(#a4deff 0%, #77d0ff 100%) ;
+    font-family:HelveticaNeue-Light;
+    color: #555;
+}
+
+.wrap {
+    width: 550px;
+    margin: 3em auto;
+    background: white;
+    padding: 2em 4em;
+    border-radius: .5em;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.3);
+}
+p {
+    font-family: Georgia,serif;
+    text-align: center;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+#warning {
+    text-align: center;
+    display: block;
+    margin: .5em;
+    font-weight: bolder;
+    color: #ff5c5c;
+    display: none;
+}
+
+label   {
+    font-weight: bold;
+    font-weight: bold;
+    background: -webkit-linear-gradient(#7ad3f1 0%, #3789a1 100%);
+    padding: .7em .85em .8em 0em;
+    display: block;
+    width: 100px;
+    float: left;
+    border-radius: .3em 0px 0px .3em;
+    margin: 5px 0;
+    color: white;
+    text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+    height: 17px;
+
+}
+
+.error {
+    color:red;
+    display: none;
+    font-style: italic;
+    background: #ffe5e5;
+    font-size: .8em;
+    text-align: center;
+    height: 20px;
+    padding: .5em 1em;
+    border-radius: .5em;
+    border: 1px solid #ffc6c6;
+    text-shadow: 0px 1px 1px white;
+
+
+}
+
+input {
+    border-radius: .5em;
+    padding: .5em;
+    border-radius: 0px 4px 4px 0px;
+    border: 1px solid #bcbcbc;
+    margin: .3em 0;
+    font-size: 1.1em;
+    width: 266px;
+
+}
+
+#first, #last, #un, #pass{
+    box-shadow: inset 0px 0px 3px #a7a7a7;
+    width: 199px;
+    height: 22px;
+}
+
+.success {
+    background: #00bfff;
+    position: absolute;
+    z-index: 1000;
+    width: 50%;
+    margin: 3em auto;
+    height: 75%;
+    top:0;
+    left: 20%;
+    padding: 2em 4em;
+    border-radius: .5em;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.3);
+    display: none;
+
+
+
+}
+
+.fixed {
+    position: fixed;
+}
+#submit {
+    font-family: HelveticaNeue-Light, sans-serif;
+    text-decoration: none;
+    background: -webkit-linear-gradient(#9ceea1 0%, #62db42 100%);
+    padding: 1em;
+    margin: 20px auto;
+    display: block;
+    width: 400px;
+    font-size: 1em;
+    text-shadow: 0px 1px 1px rgba(0,0,0, 0.7);
+    font-weight: bolder;
+    opacity: 1;
+    color: white;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+
+}
+#submit:hover{
+    background: -webkit-linear-gradient(#ffc400 0%, #fff1ba 100%);
+    cursor: pointer;
+}
+
+form{
+    width: 400px;
+    margin: 0 auto;
+    text-align: right;
+}
