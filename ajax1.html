@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Another Ajax Example</title>
+</head>
+<body>
+<div>
+    <button>Apples</button>
+    <button>Cherries</button>
+    <button>Bananas</button>
+</div>
+<div id="target">
+    Press a button
+</div>
+<script type="text/javascript">
+    var buttons = document.getElementsByTagName('button');
+    for(var i=0; i< buttons.length; i++)
+    {
+        buttons[i].onclick = handleButtonPress;
+    }
+
+    function handleButtonPress(e)
+    {
+        var http = new XMLHttpRequest();
+        http.onreadystatechange = handleResponse;
+        http.open("GET", e.target.innerHTML+ ".html");
+        http.send();
+    }
+
+    function handleResponse(e)
+    {
+        if(e.target.readyState = XMLHttpRequest.DONE && e.target.status == 200)
+        {
+            document.getElementById("target").innerHTML = e.target.responseText;
+        }
+    }
+
+</script>
+</body>
+</html>

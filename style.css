@@ -182,3 +182,41 @@ p {
     text-shadow: 1px 1px 2px #999;
     color: rgba(0, 0, 0, 0.75);
 }
+
+#mybutton {
+    padding: 5px 10px;
+    background: #9c3;
+    -moz-transition: background 0.3s ease-in-out;
+}
+
+#mybutton:hover, #mybutton:focus {
+    background: #690;
+}
+
+a:hover, a:focus {
+    background: #690;
+    color: #030;
+    -moz-transition: background .3s ease, color 0.2 linear;
+}
+
+a {
+
+    color: orange;
+    padding: 5px 10px;
+    text-decoration: none;
+
+}
+
+
+
+.success {
+    background: #9acd32;
+    padding: 1em;
+    display: none;
+
+}
+
+span {
+    color: red;
+    display: none;
+}

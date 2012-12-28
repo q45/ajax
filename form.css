@@ -2,7 +2,8 @@ html {
     min-height: 100%;
 }
 body {
-    background: -webkit-linear-gradient(#a4deff 0%, #77d0ff 100%) ;
+    background: -webkit-linear-gradient(#a4deff 0%, #77d0ff 100%);
+    background: -moz-linear-gradient(#a4deff 0%, #77d0ff 100%);
     font-family:HelveticaNeue-Light;
     color: #555;
 }
